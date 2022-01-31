@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: "Iransans";
+    src: url("./font/IRANSansWeb.eot") format("embedded-opentype");
+     src: url("./font/IRANSansWeb.ttf") format("truetype"),
+     url("./font/IRANSansWeb.woff") format("woff"),
+     url("./font/IRANSansWeb.woff2") format("woff2");
+}
+
+@layer components {
+
+.btn1{
+    @apply px-4 py-2 text-sm rounded-full font-medium border-2 border-sky-300 text-sky-500 bg-sky-200 focus:outline-none hover:bg-sky-300
+}
+.btn2{
+    @apply  px-4 py-2 text-sm rounded-full border-2 border-amber-300 text-amber-500 bg-amber-200 focus:outline-none hover:bg-amber-300
+    
+
+}
+.active-nav{
+  @apply  border-b-2 border-sky-300
+}
+.nav{
+    @apply border-b-2 border-white hover:border-sky-300
+}
+}
