@@ -1,7 +1,7 @@
 <template>
   <div class="relative">
     <button
-      class="z-10 relative flex items-center focus:outline-none select-none"
+      class="z-10  flex items-center focus:outline-none select-none"
       @click="open = !open"
     >
       <slot name="button"></slot>
@@ -30,10 +30,10 @@
           mx-auto
           shadow-lg
           border
-          w-48
+          
           rounded
           py-1
-          px-2
+          px-auto
           text-sm
           mt-4
           bg-white

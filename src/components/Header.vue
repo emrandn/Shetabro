@@ -7,11 +7,9 @@
           <button class="btn1">عضویت</button>
           <button class="btn2">ورود</button>
           <ul class="flex gap-10 mr-4">
-            <li class="active-nav"><router-link to="/">Phone</router-link></li>
+            <li class="nav"><router-link to="/">Phone</router-link></li>
             <li class="nav"><router-link to="/Otp">Otp</router-link></li>
-            <li class="nav">
-              <router-link to="/Register">Register</router-link>
-            </li>
+            <li class="nav"><router-link to="/Register">Register</router-link></li>
             <li class="nav flex">
               <vDropdownVue placement="right">
                 <!-- Button content -->
@@ -84,9 +82,7 @@
         <div class="md:hidden flex justify-center">
           <mobileMenu placement="right">
             <template v-slot:button>
-              <img
-                src="https://img.icons8.com/fluency/48/000000/menu--v1.png"
-              />
+              <img  src="https://img.icons8.com/fluency/48/000000/menu--v1.png"/>
             </template>
 
             <template v-slot:content>
@@ -102,10 +98,7 @@
                     px-2
                     py-1
                     my-1
-                    nav
-                  "
-                  >Otp</router-link
-                >
+                    nav">Otp</router-link>
                 <router-link
                   to="/"
                   class="
@@ -116,11 +109,7 @@
                     rounded
                     px-2
                     py-1
-                    my-1
-                  nav
-                  "
-                  >Phone</router-link
-                >
+                    my-1 nav">Phone</router-link >
                 <router-link
                   to="/Register"
                   class="
@@ -133,11 +122,9 @@
                     py-1
                     my-1
                     nav
-                  "
-                  >Register</router-link
-                >
+                  " >Register</router-link>
                
-                <vDropdownVue placement="right">
+                <vDropdownMob placement="right">
                   <!-- Button content -->
                   <template v-slot:button>
                     <span>محصولات</span>
@@ -200,14 +187,14 @@
                       >محصول 2</a
                     >
                   </template>
-                </vDropdownVue>
+                </vDropdownMob>
               
             
                 <button class="btn1  flex
                     w-full
                     justify-center
                     items-center
-                    rounded
+                    rounded-full
                     px-2
                     py-1
                     my-1 w-full">عضویت</button>
@@ -217,7 +204,7 @@
                     w-full
                     justify-center
                     items-center
-                    rounded
+                    rounded-full
                     px-2
                     py-1
                     my-1 w-full">ورود</button>
@@ -236,15 +223,21 @@
 
 <script>
 import vDropdownVue from "./v-dropdown.vue";
+import vDropdownMob from "./v-dropdown-mob.vue";
 import mobileMenu from "./mobile-menu.vue";
 
 export default {
   components: {
     vDropdownVue,
     mobileMenu,
+    vDropdownMob,
   },
 };
 </script>
 
 <style>
+.router-link-active{
+  color: black !important;
+  border-bottom: 2px solid rgb(0, 140, 255) !important;
+}
 </style>
